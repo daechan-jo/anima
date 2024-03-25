@@ -21,31 +21,34 @@ const JournalCard: React.FC<{
         bookMark={journal.bookMark}
       />
       <View style={styles.boundary}></View>
-      <Text style={styles.articleContent}>{journal.content}</Text>
+      <Text style={styles.journalContent}>{journal.content}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: 'white',
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
     borderRadius: 20,
     padding: 15,
     marginBottom: 15,
-    marginLeft: 10,
-    marginRight: 10,
+    marginLeft: 3,
+    marginRight: 3,
     shadowOpacity: 0.1,
     shadowRadius: 3.5,
   },
   boundary: {
-    padding: 1,
-    backgroundColor: '#F7F7F7',
-    marginBottom: 5,
+    padding: '0.2%',
+    backgroundColor: '#BBAB8C',
+    marginBottom: '2%',
+    marginTop: '1.5%',
+    opacity: 0.5,
   },
-  articleContent: {
+  journalContent: {
     fontSize: 16,
     letterSpacing: 0.5,
     lineHeight: 23,
+    color: '#535247',
   },
 });
 

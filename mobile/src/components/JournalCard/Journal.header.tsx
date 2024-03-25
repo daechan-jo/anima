@@ -22,8 +22,8 @@ const JournalHeader: React.FC<JournalHeaderProps> = ({
   menuVisible,
   bookMark,
 }) => (
-  <View style={styles.articleHeader}>
-    <Text style={styles.articleDate}>{formatJournalDate(date)}</Text>
+  <View style={styles.journalHeader}>
+    <Text style={styles.journalDate}>{formatJournalDate(date)}</Text>
     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
       {bookMark && <JournalButton name="bookmark" onPress={onEdit} />}
       {menuVisible && (
@@ -39,16 +39,17 @@ const JournalHeader: React.FC<JournalHeaderProps> = ({
 );
 
 const styles = StyleSheet.create({
-  articleHeader: {
+  journalHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginLeft: 5,
     marginRight: 5,
   },
-  articleDate: {
+  journalDate: {
     marginBottom: 5,
-    fontSize: 12, // todo rem 단위 변경
-    color: 'gray',
+    fontSize: 13, // todo rem 단위 변경
+    fontWeight: 'bold',
+    color: '#837c6d',
   },
 });
 

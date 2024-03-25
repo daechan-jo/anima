@@ -10,13 +10,13 @@ interface IconButtonProps {
 
 const IconButton: React.FC<IconButtonProps> = ({ name, onPress, style }) => (
   <TouchableOpacity onPress={onPress}>
-    <Feather name={name} style={[styles.icon, style]} />
+    <Feather name={name} style={styles.icon} />
   </TouchableOpacity>
 );
 
 const styles = StyleSheet.create({
   icon: {
-    color: '#B7B7B7',
+    color: '#BBAB8C',
     fontSize: 18,
     marginLeft: 8,
   },

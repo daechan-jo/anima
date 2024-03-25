@@ -16,10 +16,10 @@ export const createJournal = async (content: string) => {
     `journal:${newJournal.id}`,
     JSON.stringify(newJournal),
   );
-  const indexJson = await AsyncStorage.getItem('articleIndex');
+  const indexJson = await AsyncStorage.getItem('journalIndex');
   const index = indexJson ? JSON.parse(indexJson) : [];
   const updatedIndex = [...index, newJournal.id];
-  await AsyncStorage.setItem('articleIndex', JSON.stringify(updatedIndex));
+  await AsyncStorage.setItem('journalIndex', JSON.stringify(updatedIndex));
 
   return newJournal;
 };

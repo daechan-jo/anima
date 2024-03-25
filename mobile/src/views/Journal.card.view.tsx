@@ -5,6 +5,7 @@ import {
   StyleSheet,
   View,
   TouchableOpacity,
+  StatusBar,
 } from 'react-native';
 import JournalCard from '../components/JournalCard/Journal.card';
 import { Feather } from '@expo/vector-icons';
@@ -24,10 +25,10 @@ const JournalCardView: React.FC<{
   toggleModal,
 }) => {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.navBar}>
         <TouchableOpacity onPress={toggleModal}>
-          <Feather name="edit-3" size={24} color="#B7B7B7" />
+          <Feather name="edit-3" style={styles.journalCreateButton} />
         </TouchableOpacity>
       </View>
       <FlatList
@@ -43,14 +44,15 @@ const JournalCardView: React.FC<{
         )}
         contentContainerStyle={styles.listContainer}
       />
-    </SafeAreaView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f0f0f0',
+    paddingTop: '15%',
+    backgroundColor: '#fbeed8',
   },
   navBar: {
     height: 50, // todo
@@ -62,6 +64,10 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     padding: 10, // todo
+  },
+  journalCreateButton: {
+    fontSize: 24,
+    color: '#BBAB8C',
   },
 });
 
